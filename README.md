@@ -2,17 +2,19 @@
 CalendarPopUp - JTAppleCalendar library
 
 
-<img src="https://dotjpg.co/caY.png" width="300">   <img src="CalendarPopUpDemo.gif" width="300"> <img src="https://dotjpg.co/P5Cmr0i.png" width="300">
+<img src="https://dotjpg.co/caY.png" width="270">   <img src="CalendarPopUpDemo.gif" width="270"> <img src="https://dotjpg.co/P5Cmr0i.png" width="270">
 
 # Parameters 
 
-  In CellView.swift 
-     *  preDateSelectable: Bool
-     *  todayColor: UIColor
-     *  selectableDateColor: UIColor
-     *  selectedRoundColor: UIColor
+  **In CellView.swift**
   
-  CalendarPopUp.swift
+     * preDateSelectable: Bool
+     * todayColor: UIColor
+     * selectableDateColor: UIColor
+     * selectedRoundColor: UIColor
+  
+  **CalendarPopUp.swift**
+  
      *  startDate: Date
      *  endDate: Date
 
