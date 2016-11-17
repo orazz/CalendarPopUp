@@ -2,9 +2,7 @@
 CalendarPopUp - JTAppleCalendar library
 
 
-<img src="https://dotjpg.co/caY.png" width="300">
-
-<img src="CalendarPopUpDemo.gif" width="300">
+<img src="https://dotjpg.co/caY.png" width="300">   <img src="CalendarPopUpDemo.gif" width="300">
 
 ## Authors
 
