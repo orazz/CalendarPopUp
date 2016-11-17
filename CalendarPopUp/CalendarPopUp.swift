@@ -22,7 +22,8 @@ class CalendarPopUp: UIView {
     weak var calendarDelegate: CalendarPopUpDelegate?
     
     var endDate: Date!
-    var firstday: Date = Date().getStart()
+    var startDate: Date = Date().getStart()
+    
     var testCalendar = Calendar(identifier: .gregorian)
     var selectedDate: Date! = Date() {
         didSet {
@@ -52,7 +53,7 @@ class CalendarPopUp: UIView {
     override func awakeFromNib() {
         //Calendar
         // You can also use dates created from this function
-        endDate = Calendar.current.date(byAdding: .month, value: 1, to: firstday)!
+        endDate = Calendar.current.date(byAdding: .month, value: 1, to: startDate)!
         setCalendar()
         setDate()
     }
@@ -96,7 +97,7 @@ extension CalendarPopUp: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSou
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy MM dd"
         
-        let parameters = ConfigurationParameters(startDate: firstday,
+        let parameters = ConfigurationParameters(startDate: startDate,
                                                  endDate: endDate,
                                                  numberOfRows: 6,
                                                  calendar: testCalendar, // This parameter will be removed in version 6.0.1

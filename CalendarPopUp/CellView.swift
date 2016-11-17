@@ -8,11 +8,12 @@
 
 import JTAppleCalendar
 
+private let preDateSelectable: Bool = true
+private let todayColor: UIColor = UIColor.black
+private let selectableDateColor: UIColor = .white
+private let selectedRoundColor: UIColor = UIColor(hex: 0xA9620C)
+
 class CellView: JTAppleDayCellView {
-    
-    let todayColor: UIColor = UIColor(red: 139/255, green: 202/255, blue: 232/255, alpha: 1)
-    let selectableDateColor: UIColor = .white
-    let selectedRoundColor: UIColor = UIColor(red: 2/255, green: 106/255, blue: 167/255, alpha: 1)
     
     @IBOutlet weak var stableBackView: AnimationView!
     @IBOutlet var selectedView: AnimationView!
@@ -31,7 +32,7 @@ class CellView: JTAppleDayCellView {
             self.dayLabel.text = ""
             self.isUserInteractionEnabled = false
             self.stableBackView.isHidden = true
-        } else if date.isSmaller(to: Date()) {
+        } else if date.isSmaller(to: Date()) && !preDateSelectable {
             self.dayLabel.text = "-"
             self.dayLabel.textColor = UIColor.white
             self.isUserInteractionEnabled = false

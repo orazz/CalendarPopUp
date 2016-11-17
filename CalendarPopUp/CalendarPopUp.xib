@@ -140,7 +140,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.48627450980392156" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.66274509803921566" green="0.38431372549019605" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="aL7-rh-HGG" firstAttribute="leading" secondItem="1LE-RN-g9j" secondAttribute="leadingMargin" id="IGc-Sa-8Z5"/>
                         <constraint firstItem="aL7-rh-HGG" firstAttribute="top" secondItem="1LE-RN-g9j" secondAttribute="topMargin" id="ha8-j4-vPE"/>
@@ -161,7 +161,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.062745098039215685" green="0.57647058823529407" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="IGZ-3a-NpZ" secondAttribute="trailing" constant="13" id="3r4-ff-BsN"/>
                 <constraint firstAttribute="bottom" secondItem="IGZ-3a-NpZ" secondAttribute="bottom" constant="21" id="Cbd-bc-XLI"/>
