@@ -104,6 +104,7 @@ extension CalendarPopUp: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSou
             generateInDates: .forAllMonths,
             generateOutDates: .tillEndOfGrid,
             firstDayOfWeek: .sunday)
+        
         return parameters
     }
     

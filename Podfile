@@ -6,5 +6,5 @@ target 'CalendarPopUp' do
   use_frameworks!
 
   # Pods for CalendarPopUp
-  pod 'JTAppleCalendar', '~>6.0'
+  pod 'JTAppleCalendar', '6.0'
 end

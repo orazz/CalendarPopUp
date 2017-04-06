@@ -49,7 +49,7 @@ class AnimationClass {
         var transform = CATransform3DIdentity
         transform.m34 = -1.0 / 500.0
         transform = CATransform3DRotate(transform,
-                                CGFloat(angle * M_PI / 180.0), 0, 1, 0.0)
+                                CGFloat(angle * Double.pi / 180.0), 0, 1, 0.0)
         return transform
     }
 
