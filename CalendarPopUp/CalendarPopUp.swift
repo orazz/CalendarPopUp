@@ -53,7 +53,7 @@ class CalendarPopUp: UIView {
     override func awakeFromNib() {
         //Calendar
         // You can also use dates created from this function
-        endDate = Calendar.current.date(byAdding: .month, value: 1, to: startDate)!
+        endDate = Calendar.current.date(byAdding: .month, value: 2, to: startDate)!
         setCalendar()
         setDate()
     }
@@ -81,8 +81,8 @@ class CalendarPopUp: UIView {
         let month = testCalendar.dateComponents([.month], from: selectedDate).month!
         let weekday = testCalendar.component(.weekday, from: selectedDate)
         
-        let monthName = DateFormatter().monthSymbols[(month-1) % 12] //GetHumanDate(month: month)//
-        let week = DateFormatter().shortWeekdaySymbols[weekday-1]
+        let monthName = DateFormatter().monthSymbols[(month-1) % 12] //GetHumanDate(month: month)
+        let week = DateFormatter().shortWeekdaySymbols[weekday-1] //GetTurkmenWeek(weekDay: weekday)
         
         let day = testCalendar.component(.day, from: selectedDate)
         

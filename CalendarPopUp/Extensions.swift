@@ -9,6 +9,25 @@
 import UIKit
 
 //
+// Get week
+// 
+//
+
+func GetTurkmenWeek(weekDay: Int) -> String
+{
+    let weekArr: [Int: String] =
+        [ 01 : "Duşenbe",
+          02 : "Sişenbe",
+          03 : "Çarşenbe",
+          04 : "Penşenbe",
+          05 : "Anna",
+          06 : "Sişenbe",
+          07 : "Ýekşenbe",
+         ]
+    return weekArr[weekDay]!
+}
+
+//
 // Get humanDate
 // Turkmen month
 //

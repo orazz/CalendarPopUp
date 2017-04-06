@@ -74,10 +74,10 @@ open class PopupContainer: UIView {
         var rotationAngle : CGFloat = 0
         
         switch UIApplication.shared.statusBarOrientation {
-        case .landscapeLeft: rotationAngle = CGFloat(M_PI_2) * 3
-        case .landscapeRight: rotationAngle = CGFloat(M_PI_2)
+        case .landscapeLeft: rotationAngle = CGFloat(Double.pi/2) * 3
+        case .landscapeRight: rotationAngle = CGFloat(Double.pi/2)
         case .portrait: rotationAngle = 0
-        case .portraitUpsideDown: rotationAngle = CGFloat(M_PI)
+        case .portraitUpsideDown: rotationAngle = CGFloat(Double.pi)
         default: rotationAngle = 0
         }
         
@@ -130,10 +130,10 @@ open class PopupContainer: UIView {
         let interfaceOrientation = UIApplication.shared.statusBarOrientation
         
         switch (interfaceOrientation) {
-        case .landscapeLeft: self.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2) * 3)
-        case .landscapeRight: self.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
+        case .landscapeLeft: self.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2) * 3)
+        case .landscapeRight: self.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
         case .portrait: self.transform = CGAffineTransform(rotationAngle: 0)
-        case .portraitUpsideDown: self.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
+        case .portraitUpsideDown: self.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         default: break;
         }
         
