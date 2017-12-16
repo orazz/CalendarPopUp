@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         let xibView = Bundle.main.loadNibNamed("CalendarPopUp", owner: nil, options: nil)?[0] as! CalendarPopUp
         xibView.calendarDelegate = self
         xibView.selected = currentDate
+        xibView.startDate = Calendar.current.date(byAdding: .month, value: -12, to: currentDate)!
         PopupContainer.generatePopupWithView(xibView).show()
     }
     
