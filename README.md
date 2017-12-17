@@ -2,7 +2,7 @@
 CalendarPopUp - JTAppleCalendar library
 
 
-<img src="https://dotjpg.co/caY.png" width="270">   <img src="1.gif" width="270"> <img src="https://dotjpg.co/P5Cmr0i.png" width="270">
+[![CalendarPopUp](1.mp4)]
 
 # Install
   **Run $ pod install in project directory.**
