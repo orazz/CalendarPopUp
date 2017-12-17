@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A2323a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -108,13 +113,24 @@
                         <constraint firstAttribute="trailing" secondItem="mCq-J9-4aq" secondAttribute="trailing" id="bvh-e8-2yw"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wf7-hF-LgL" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hoH-Ro-E1m" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
                     <rect key="frame" x="15" y="156" width="287" height="222"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="287" id="RJD-aG-qjA"/>
-                        <constraint firstAttribute="height" constant="222" id="eTA-pL-HAZ"/>
+                        <constraint firstAttribute="width" constant="287" id="1mV-3I-MnT"/>
+                        <constraint firstAttribute="height" constant="222" id="ZNt-oa-bnc"/>
                     </constraints>
-                </view>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5sP-4E-6jL">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="ibCalendarDataSource" destination="-1" id="ssl-zC-h37"/>
+                        <outlet property="ibCalendarDelegate" destination="-1" id="f8o-AR-71L"/>
+                    </connections>
+                </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGZ-3a-NpZ">
                     <rect key="frame" x="245" y="382" width="57" height="30"/>
                     <constraints>
@@ -164,27 +180,27 @@
             </subviews>
             <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="hoH-Ro-E1m" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="3Nz-XG-jfj"/>
                 <constraint firstAttribute="trailing" secondItem="IGZ-3a-NpZ" secondAttribute="trailing" constant="13" id="3r4-ff-BsN"/>
+                <constraint firstAttribute="trailing" secondItem="hoH-Ro-E1m" secondAttribute="trailing" constant="13" id="7tt-fq-sIM"/>
                 <constraint firstAttribute="bottom" secondItem="IGZ-3a-NpZ" secondAttribute="bottom" constant="21" id="Cbd-bc-XLI"/>
-                <constraint firstItem="IGZ-3a-NpZ" firstAttribute="top" secondItem="Wf7-hF-LgL" secondAttribute="bottom" constant="4" id="FOV-VV-L4T"/>
                 <constraint firstItem="1LE-RN-g9j" firstAttribute="top" secondItem="bbG-g8-vqu" secondAttribute="bottom" constant="8" id="H1R-0E-vnx"/>
-                <constraint firstItem="Wf7-hF-LgL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="R0j-tc-XQ6"/>
                 <constraint firstItem="1LE-RN-g9j" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RGF-6r-aXs"/>
-                <constraint firstItem="Wf7-hF-LgL" firstAttribute="top" secondItem="nmE-zs-jxH" secondAttribute="bottom" constant="11" id="aMG-zk-trV"/>
                 <constraint firstAttribute="bottom" secondItem="CXO-vt-zHj" secondAttribute="bottom" constant="21" id="f9c-T5-LR6"/>
                 <constraint firstItem="bbG-g8-vqu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gn2-Hm-edM"/>
                 <constraint firstItem="bbG-g8-vqu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="kZH-j5-dKb"/>
                 <constraint firstItem="nmE-zs-jxH" firstAttribute="top" secondItem="1LE-RN-g9j" secondAttribute="bottom" constant="8" id="lIE-eb-k3T"/>
                 <constraint firstAttribute="trailing" secondItem="1LE-RN-g9j" secondAttribute="trailing" id="nCK-hB-Xwl"/>
-                <constraint firstAttribute="trailing" secondItem="Wf7-hF-LgL" secondAttribute="trailing" constant="13" id="weB-6E-V2T"/>
+                <constraint firstItem="hoH-Ro-E1m" firstAttribute="top" secondItem="nmE-zs-jxH" secondAttribute="bottom" constant="11" id="uPG-Ah-c4G"/>
                 <constraint firstItem="IGZ-3a-NpZ" firstAttribute="leading" secondItem="CXO-vt-zHj" secondAttribute="trailing" constant="7" id="x5k-Au-2vu"/>
+                <constraint firstItem="IGZ-3a-NpZ" firstAttribute="top" secondItem="hoH-Ro-E1m" secondAttribute="bottom" constant="4" id="xUe-Q8-oqT"/>
                 <constraint firstItem="nmE-zs-jxH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yva-sr-ICn"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="calendarHeaderLabel" destination="bbG-g8-vqu" id="AC7-6l-f1u"/>
-                <outlet property="calendarView" destination="Wf7-hF-LgL" id="d8h-TC-fe2"/>
+                <outlet property="calendarView" destination="hoH-Ro-E1m" id="WBB-e2-xf3"/>
                 <outlet property="dateLabel" destination="aL7-rh-HGG" id="ADL-7T-n43"/>
             </connections>
             <point key="canvasLocation" x="276.5" y="466.5"/>

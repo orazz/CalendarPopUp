@@ -39,7 +39,6 @@ class ViewController: UIViewController {
     func setDate() {
         let month = testCalendar.dateComponents([.month], from: currentDate).month!
         let weekday = testCalendar.component(.weekday, from: currentDate)
-        
         let monthName = DateFormatter().monthSymbols[(month-1) % 12] //GetHumanDate(month: month)//
         let week = DateFormatter().shortWeekdaySymbols[weekday-1]
         

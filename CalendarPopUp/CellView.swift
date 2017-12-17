@@ -13,7 +13,7 @@ private let todayColor: UIColor = UIColor.black
 private let selectableDateColor: UIColor = .white
 private let selectedRoundColor: UIColor = UIColor(hex: 0xA9620C)
 
-class CellView: JTAppleDayCellView {
+class CellView: JTAppleCell {
     
     @IBOutlet weak var stableBackView: AnimationView!
     @IBOutlet var selectedView: AnimationView!
