@@ -2,7 +2,9 @@
 CalendarPopUp - JTAppleCalendar library
 
 
-[![CalendarPopUp](1.mp4)]
+<video width="320" height="200" controls preload> 
+    <source src="1.mp4"></source> 
+</video>
 
 # Install
   **Run $ pod install in project directory.**
