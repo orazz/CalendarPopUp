@@ -1,3 +1,6 @@
 Pods/
 .DS_Store
+## Build generated
+build/
+DerivedData/
 CalendarPopUp.xcworkspace/xcuserdata/atakishiyev.xcuserdatad/UserInterfaceState.xcuserstate
