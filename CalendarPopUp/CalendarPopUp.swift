@@ -66,7 +66,7 @@ class CalendarPopUp: UIView {
         let weekday = testCalendar.component(.weekday, from: selectedDate)
         
         let monthName = DateFormatter().monthSymbols[(month-1) % 12] //GetHumanDate(month: month)
-        let week = DateFormatter().shortWeekdaySymbols[weekday-1] //GetTurkmenWeek(weekDay: weekday)
+        let week = GetTurkmenWeek(weekDay: weekday) // DateFormatter().shortWeekdaySymbols[weekday-1] 
         
         let day = testCalendar.component(.day, from: selectedDate)
         
