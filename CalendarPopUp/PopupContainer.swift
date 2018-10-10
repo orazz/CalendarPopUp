@@ -37,7 +37,7 @@ open class PopupContainer: UIView {
         NotificationCenter.default.addObserver(
             popupContainer,
             selector: #selector(PopupContainer.interfaceOrientationChanged(_:)),
-            name: NSNotification.Name.UIDeviceOrientationDidChange,
+            name: UIDevice.orientationDidChangeNotification,
             object: nil)
         
         popupContainer.dialogView = view;
@@ -70,7 +70,7 @@ open class PopupContainer: UIView {
         self.dialogView.addMotionEffect(motionEffectGroup)
     }
     
-    func interfaceOrientationChanged(_ notification: Notification) {
+    @objc func interfaceOrientationChanged(_ notification: Notification) {
         var rotationAngle : CGFloat = 0
         
         switch UIApplication.shared.statusBarOrientation {
@@ -147,7 +147,7 @@ open class PopupContainer: UIView {
         UIView.animate(
             withDuration: 0.2,
             delay: 0.0,
-            options: UIViewAnimationOptions(),
+            options: UIView.AnimationOptions(),
             animations: { () -> Void in
                 self.backgroundColor = UIColor.black.withAlphaComponent(0.4)
                 self.dialogView.layer.opacity = 1
@@ -162,7 +162,7 @@ open class PopupContainer: UIView {
         UIView.animate(
             withDuration: 0.2,
             delay: 0.0,
-            options: UIViewAnimationOptions(),
+            options: UIView.AnimationOptions(),
             animations: { () -> Void in
                 self.backgroundColor = UIColor.black.withAlphaComponent(0)
                 self.dialogView.layer.transform = CATransform3DMakeScale(0.6, 0.6, 1)
