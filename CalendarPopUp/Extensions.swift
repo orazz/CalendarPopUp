@@ -12,19 +12,25 @@ import UIKit
 // Get week
 // 
 //
+enum CalendarLanguage {
+    case english
+    case spanish
+    case deutsch
+    case italian
+}
 
-func GetTurkmenWeek(weekDay: Int) -> String
+func GetTurkmenWeek(weekDay: Int, language: CalendarLanguage = .spanish) -> String
 {
-    let weekArr: [Int: String] =
-        [ 01 : "Duşenbe",
-          02 : "Sişenbe",
-          03 : "Çarşenbe",
-          04 : "Penşenbe",
-          05 : "Anna",
-          06 : "Sişenbe",
-          07 : "Ýekşenbe",
-         ]
-    return weekArr[weekDay]!
+    switch language {
+    case .deutsch:
+        return weekArr_De[weekDay]!
+    case .english:
+        return weekArr_En[weekDay]!
+    case .italian:
+        return weekArr_It[weekDay]!
+    case .spanish:
+        return weekArr_Sp[weekDay]!
+    }
 }
 
 //
@@ -32,22 +38,18 @@ func GetTurkmenWeek(weekDay: Int) -> String
 // Turkmen month
 //
 
-func GetHumanDate(month: Int) -> String
+func GetHumanDate(month: Int, language: CalendarLanguage = .spanish) -> String
 {
-    let monthArr: [Int: String] =
-        [ 01 : "Ýanwar",
-          02 : "Fewral",
-          03 : "Mart",
-          04 : "Aprel",
-          05 : "Maý",
-          06 : "Iýun",
-          07 : "Iýul",
-          08 : "Awgust",
-          09 : "Sentýabr",
-          10 : "Oktýabr",
-          11 : "Noýabr",
-          12 : "Dekabr"]
-    return monthArr[month]!
+    switch language {
+    case .deutsch:
+        return monthArr_De[month]!
+    case .english:
+        return monthArr_En[month]!
+    case .italian:
+        return monthArr_It[month]!
+    case .spanish:
+        return monthArr_Sp[month]!
+    }
 }
 
 extension Date {

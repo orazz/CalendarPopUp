@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AC2BF85216E63870047B7C4 /* CalendarLanguageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC2BF84216E63870047B7C4 /* CalendarLanguageConstants.swift */; };
 		8E609D7C1DDCD841005A52F3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E609D7B1DDCD841005A52F3 /* Extensions.swift */; };
 		8E71C5AA1FE6A41D0050632D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8E71C5A91FE6A41D0050632D /* README.md */; };
 		8E9519801DDC47BA00432EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E95197F1DDC47BA00432EC2 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		09ED5D86FFBE64261F32D8FC /* Pods_CalendarPopUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarPopUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AC2BF84216E63870047B7C4 /* CalendarLanguageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLanguageConstants.swift; sourceTree = "<group>"; };
 		2454BEC858982D3547CB686A /* Pods-CalendarPopUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarPopUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarPopUp/Pods-CalendarPopUp.release.xcconfig"; sourceTree = "<group>"; };
 		8E609D7B1DDCD841005A52F3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8E71C5A91FE6A41D0050632D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -108,6 +110,7 @@
 				8E95198B1DDC47BA00432EC2 /* Info.plist */,
 				8E609D7B1DDCD841005A52F3 /* Extensions.swift */,
 				8E71C5A91FE6A41D0050632D /* README.md */,
+				1AC2BF84216E63870047B7C4 /* CalendarLanguageConstants.swift */,
 			);
 			path = CalendarPopUp;
 			sourceTree = "<group>";
@@ -124,7 +127,6 @@
 				8E9519791DDC47BA00432EC2 /* Frameworks */,
 				8E95197A1DDC47BA00432EC2 /* Resources */,
 				9C306648FA7ED8BD73D098F3 /* [CP] Embed Pods Frameworks */,
-				C2E2483907A4270EB1DE6A07 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,13 +144,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Veriloft;
 				TargetAttributes = {
 					8E95197B1DDC47BA00432EC2 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 683U48NZTT;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -224,21 +226,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalendarPopUp/Pods-CalendarPopUp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C2E2483907A4270EB1DE6A07 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalendarPopUp/Pods-CalendarPopUp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -251,6 +238,7 @@
 				8E9519A11DDC8B2900432EC2 /* CellView.swift in Sources */,
 				8E9519931DDC744A00432EC2 /* PopupContainer.swift in Sources */,
 				8E9519801DDC47BA00432EC2 /* AppDelegate.swift in Sources */,
+				1AC2BF85216E63870047B7C4 /* CalendarLanguageConstants.swift in Sources */,
 				8E95199D1DDC78FB00432EC2 /* AnimationClass.swift in Sources */,
 				8E609D7C1DDCD841005A52F3 /* Extensions.swift in Sources */,
 			);
@@ -287,15 +275,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -337,15 +333,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -383,7 +387,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.veriloft.CalendarPopUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -399,7 +404,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.veriloft.CalendarPopUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
