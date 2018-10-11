@@ -13,15 +13,18 @@ import UIKit
 // 
 //
 enum CalendarLanguage {
+    case turkmen
     case english
     case spanish
     case deutsch
     case italian
 }
 
-func GetTurkmenWeek(weekDay: Int, language: CalendarLanguage = .spanish) -> String
+func GetWeekByLang(weekDay: Int, language: CalendarLanguage = .spanish) -> String
 {
     switch language {
+    case .turkmen:
+        return weekArr_Tk[weekDay]!
     case .deutsch:
         return weekArr_De[weekDay]!
     case .english:
@@ -41,6 +44,8 @@ func GetTurkmenWeek(weekDay: Int, language: CalendarLanguage = .spanish) -> Stri
 func GetHumanDate(month: Int, language: CalendarLanguage = .spanish) -> String
 {
     switch language {
+    case .turkmen:
+        return monthArr_Tk[month]!
     case .deutsch:
         return monthArr_De[month]!
     case .english:

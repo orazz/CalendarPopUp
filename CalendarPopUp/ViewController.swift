@@ -40,8 +40,8 @@ class ViewController: UIViewController {
     func setDate() {
         let month = testCalendar.dateComponents([.month], from: currentDate).month!
         let weekday = testCalendar.component(.weekday, from: currentDate)
-        let monthName = GetHumanDate(month: month, language: .spanish) // DateFormatter().monthSymbols[(month-1) % 12] //
-        let week = GetTurkmenWeek(weekDay: weekday, language: .spanish) // DateFormatter().shortWeekdaySymbols[weekday-1]
+        let monthName = GetHumanDate(month: month, language: .turkmen) // DateFormatter().monthSymbols[(month-1) % 12] //
+        let week = GetWeekByLang(weekDay: weekday, language: .turkmen) // DateFormatter().shortWeekdaySymbols[weekday-1]
         let day = testCalendar.component(.day, from: currentDate)
         dateLabel.text = "\(week), " + monthName + " " + String(day)
     }

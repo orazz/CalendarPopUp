@@ -8,6 +8,29 @@
 
 import Foundation
 
+let weekArr_Tk: [Int: String] =
+    [ 01 : "Duşenbe",
+      02 : "Sişenbe",
+      03 : "Çarşenbe",
+      04 : "Penşenbe",
+      05 : "Anna",
+      06 : "Şenbe",
+      07 : "Ýekşenbe",
+]
+let monthArr_Tk: [Int: String] =
+    [ 01 : "Ýanwar",
+      02 : "Fewral",
+      03 : "Mart",
+      04 : "Aprel",
+      05 : "Maý",
+      06 : "Iýun",
+      07 : "Iýul",
+      08 : "Awgust",
+      09 : "Sentýabr",
+      10 : "Oktýabr",
+      11 : "Noýabr",
+      12 : "Dekabr"]
+
 let weekArr_Sp: [Int: String] =
     [ 01 : "Lunes",
       02 : "Martes",

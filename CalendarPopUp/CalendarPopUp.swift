@@ -21,6 +21,7 @@ class CalendarPopUp: UIView {
 
     weak var calendarDelegate: CalendarPopUpDelegate?
     
+    let calLanguage: CalendarLanguage = .turkmen
     var endDate: Date!
     var startDate: Date = Date().getStart()
     var testCalendar = Calendar(identifier: .gregorian)
@@ -74,8 +75,8 @@ class CalendarPopUp: UIView {
         let month = testCalendar.dateComponents([.month], from: selectedDate).month!
         let weekday = testCalendar.component(.weekday, from: selectedDate)
         
-        let monthName = GetHumanDate(month: month, language: .spanish) // DateFormatter().monthSymbols[(month-1) % 12] //
-        let week = GetTurkmenWeek(weekDay: weekday, language: .spanish) // DateFormatter().shortWeekdaySymbols[weekday-1]
+        let monthName = GetHumanDate(month: month, language: calLanguage) // DateFormatter().monthSymbols[(month-1) % 12] //
+        let week = GetWeekByLang(weekDay: weekday, language: calLanguage) // DateFormatter().shortWeekdaySymbols[weekday-1]
         
         let day = testCalendar.component(.day, from: selectedDate)
         
@@ -87,7 +88,7 @@ class CalendarPopUp: UIView {
             return
         }
         let month = testCalendar.dateComponents([.month], from: startDate).month!
-        let monthName = GetHumanDate(month: month, language: .spanish) // DateFormatter().monthSymbols[Int(month.month!)-1]
+        let monthName = GetHumanDate(month: month, language: calLanguage) // DateFormatter().monthSymbols[Int(month.month!)-1]
         
         let year = testCalendar.component(.year, from: startDate)
         calendarHeaderLabel.text = monthName + ", " + String(year)
