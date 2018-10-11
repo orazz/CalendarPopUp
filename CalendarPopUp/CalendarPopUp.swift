@@ -31,6 +31,7 @@ class CalendarPopUp: UIView {
     }
     var selected:Date = Date() {
         didSet {
+
             calendarView.scrollToDate(selected)
             calendarView.selectDates([selected])
         }
@@ -58,15 +59,23 @@ class CalendarPopUp: UIView {
         self.calendarView.visibleDates {[unowned self] (visibleDates: DateSegmentInfo) in
             self.setupViewsOfCalendar(from: visibleDates)
         }
-        
+        let cornerRadius = CGFloat(10.0)
+        let shadowOpacity = Float(1)
+        self.layer.cornerRadius = cornerRadius
+        let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.gray.cgColor
+        layer.shadowOffset = CGSize(width: 2, height: 5)
+        layer.shadowOpacity = shadowOpacity
+        layer.shadowPath = shadowPath.cgPath
     }
 
     func setDate() {
         let month = testCalendar.dateComponents([.month], from: selectedDate).month!
         let weekday = testCalendar.component(.weekday, from: selectedDate)
         
-        let monthName = DateFormatter().monthSymbols[(month-1) % 12] //GetHumanDate(month: month)
-        let week = DateFormatter().shortWeekdaySymbols[weekday-1] //GetTurkmenWeek(weekDay: weekday)
+        let monthName = GetHumanDate(month: month, language: .spanish) // DateFormatter().monthSymbols[(month-1) % 12] //
+        let week = GetTurkmenWeek(weekDay: weekday, language: .spanish) // DateFormatter().shortWeekdaySymbols[weekday-1]
         
         let day = testCalendar.component(.day, from: selectedDate)
         
@@ -77,8 +86,8 @@ class CalendarPopUp: UIView {
         guard let startDate = visibleDates.monthDates.first?.date else {
             return
         }
-        let month = testCalendar.dateComponents([.month], from: startDate)
-        let monthName = DateFormatter().monthSymbols[Int(month.month!)-1] //GetHumanDate(month: month)
+        let month = testCalendar.dateComponents([.month], from: startDate).month!
+        let monthName = GetHumanDate(month: month, language: .spanish) // DateFormatter().monthSymbols[Int(month.month!)-1]
         
         let year = testCalendar.component(.year, from: startDate)
         calendarHeaderLabel.text = monthName + ", " + String(year)

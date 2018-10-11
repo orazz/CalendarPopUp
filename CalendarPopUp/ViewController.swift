@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var dateLabel: UILabel!
     var aPopupContainer: PopupContainer?
-    var testCalendar = Calendar(identifier: .gregorian)
+    var testCalendar = Calendar(identifier: Calendar.Identifier.iso8601)
     var currentDate: Date! = Date() {
         didSet {
             setDate()
@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         xibView.calendarDelegate = self
         xibView.selected = currentDate
         xibView.startDate = Calendar.current.date(byAdding: .month, value: -12, to: currentDate)!
+        xibView.endDate = Calendar.current.date(byAdding: .year, value: 2, to: currentDate)!
         PopupContainer.generatePopupWithView(xibView).show()
     }
     
@@ -39,11 +40,9 @@ class ViewController: UIViewController {
     func setDate() {
         let month = testCalendar.dateComponents([.month], from: currentDate).month!
         let weekday = testCalendar.component(.weekday, from: currentDate)
-        let monthName = DateFormatter().monthSymbols[(month-1) % 12] //GetHumanDate(month: month)//
-        let week = DateFormatter().shortWeekdaySymbols[weekday-1]
-        
+        let monthName = GetHumanDate(month: month, language: .spanish) // DateFormatter().monthSymbols[(month-1) % 12] //
+        let week = GetTurkmenWeek(weekDay: weekday, language: .spanish) // DateFormatter().shortWeekdaySymbols[weekday-1]
         let day = testCalendar.component(.day, from: currentDate)
-        
         dateLabel.text = "\(week), " + monthName + " " + String(day)
     }
 }

@@ -18,7 +18,7 @@ class AnimationClass {
                 withDuration: 0.5,
                 delay: 0, usingSpringWithDamping: 0.3,
                 initialSpringVelocity: 0.1,
-                options: UIViewAnimationOptions.beginFromCurrentState,
+                options: UIView.AnimationOptions.beginFromCurrentState,
                 animations: {
                     view.transform = CGAffineTransform(scaleX: 1, y: 1)
                 },
